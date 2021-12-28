@@ -10,4 +10,7 @@ app.set('views', 'views');
 app.use(routes);
   
 server = http.Server(app);
-server.listen(80);
+
+const PORT = process.env.port||'3000';
+
+server.listen(PORT);
